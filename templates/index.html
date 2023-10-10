@@ -96,7 +96,9 @@
                         } else {
                             temp_html = `<li>
                                     <h2 class="done">✅ ${bucket}</h2>
-                                </li>`
+                                    <button onclick="delete_bucket(${num})" type="button" class="btn btn-outline-danger">Delete</button>
+                        </li>`;
+
                         }
                         $('#bucket-list').append(temp_html)
                     }
