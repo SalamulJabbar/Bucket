@@ -170,6 +170,17 @@
 
         </li>
     </div>
+    <img id="ogImage" alt="Open Graph Image" />
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var ogImageMeta = document.querySelector('meta[property="og:image"]');
+            var ogImageUrl = ogImageMeta ? ogImageMeta.getAttribute("content") : "";
+    
+            var imgElement = document.getElementById("ogImage");
+            imgElement.src = ogImageUrl;
+        });
+    </script>
 </body>
 
 </html>
