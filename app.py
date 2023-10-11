@@ -35,7 +35,7 @@ def bucket_post():
 
 @app.route("/bucket/done", methods=["POST"])
 def bucket_done():
-    num_receive = request.form["num_give"]
+    num_receive =int( request.form["num_give"])
     db.bucket.update_one(
         {'num': int(num_receive)},
         {'$set': {'done': 1}}
